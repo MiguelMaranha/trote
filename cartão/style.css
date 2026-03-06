@@ -1,0 +1,54 @@
+/* --- Estilização do Corpo da Página (o fundo geral) --- */
+body {
+    /* Define a cor de fundo azul (o RGB que você escolheu) */
+    background-color: rgb(84, 178, 255); 
+    /* Ativa o modo Flexbox: permite organizar elementos facilmente */
+    display: flex; 
+    /* Centraliza o conteúdo (o card) horizontalmente */
+    justify-content: center; 
+    /* Centraliza o conteúdo (o card) verticalmente */
+    align-items: center; 
+    /* Define a altura como 100% da altura da tela (Viewport Height) */
+    /* Sem isso, o alinhamento vertical não funcionaria */
+    height: 100vh; 
+    /* Define a fonte padrão para todo o texto da página */
+    font-family: Arial, sans-serif; 
+}
+
+/* Estamos estilizando a classe .botao-youtube em vez da tag button */
+.botao-youtube {
+    background-color: #FFA154; /* Sua cor laranja */
+    color: white;
+    
+    /* O SEGREDO 1: Tira o sublinhado feio de link */
+    text-decoration: none; 
+    
+    /* O SEGREDO 2: Faz o link se comportar como uma caixa (aceitar tamanho) */
+    display: inline-block; 
+    
+    padding: 10px 20px; /* O "gordinho" do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-weight: bold;  /* Deixa a letra mais grossa */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra leve para parecer botão 3D */
+    transition: 0.3s; /* Suaviza a cor quando passa o mouse */
+}
+
+/* Opcional: Efeito ao passar o mouse */
+.botao-youtube:hover {
+    background-color: #e68a00; /* Laranja mais escuro */
+}
+
+/* --- Estilização do Cartão (a caixa branca no meio) --- */
+/* O ponto (.) indica que estamos estilizando uma CLASSE chamada "card" */
+.card { 
+    /* Fundo branco para contrastar com o azul da página */
+    background: white; 
+    /* Espaço interno: afasta o texto das bordas do cartão */
+    padding: 20px; 
+    /* Bordas mais arredondadas que as do botão */
+    border-radius: 10px; 
+    /* Sombra suave para dar efeito de profundidade (3D) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    /* Centraliza o texto e o botão dentro do próprio cartão */
+    text-align: center; 
+}

@@ -1,0 +1,46 @@
+body {
+    /* Define a fonte para todo o documento */
+    /* Se não tiver Helvetica, ele tenta Arial, se não, usa qualquer sem-serifa */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+    background-color: rgb(139, 38, 255);
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh;
+    padding: 0;
+    margin: 0; /* Remove margens padrão do navegador */
+    letter-spacing: -0.5px;
+}
+
+.cartao {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    text-align: center;
+    /* Adicionei uma sombra leve para dar profundidade */
+    box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+
+img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    
+    /* A LINHA (BORDA): */
+    /* 3px de espessura, tipo sólida, cor roxa */
+    border: 3px solid #8b26ff; 
+    
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #fd2424;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold; /* Deixa o texto do botão mais visível */
+    cursor: pointer; /* Muda o mouse para a "mãozinha" ao passar por cima */
+}

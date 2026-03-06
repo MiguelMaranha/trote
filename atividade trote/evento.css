@@ -1,0 +1,130 @@
+        /* Zera margens padrão do navegador */
+        *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        }
+
+        /*Define a cor de fundo da página*/
+        body {
+        /*Define altura da página*/
+        min-height: 100vh;
+        background: #0649c7;
+        /* Define o FlexBox como layou da página */
+        display: flex;
+        /* Centralizar na vertical*/
+        align-items: center;
+        /* Centralizar na horizontal */
+        justify-content: center;
+        /* Fonte */
+        font-family: Helvetica, Arial, sans-serif; 
+        
+        padding: 2rem;
+        }
+
+        /* O card branco central, o ponto referencia a class */
+        .card {
+        background: #fff;
+        border-radius: 28px;
+        padding: 2.5rem 2rem 2rem;
+        max-width: 360px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+        animation: fadeUp 0.7s ease both;
+        }
+
+        /* Animação de entrada ao website */
+        @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Título principal */
+        .card h1 {
+        font-weight: 900;
+        font-size: 2rem;
+        color: #1a3a8f;
+        line-height: 1.1;
+        margin-bottom: .5rem;
+        }
+
+        /* Subtítulo cinza */
+        .card .subtitle {
+        font-size: .9rem;
+        color: #6b7280;
+        margin-bottom: 1.8rem;
+        }
+
+        /* Título:"O que teremos:" */
+        .section-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+        color: #111827;
+        margin-bottom: 1.2rem;
+        }
+
+        /* Container da lista inteira */
+        .items {
+            list-style: none; /* Isso remove as bolinhas! */
+            display: flex;
+            flex-direction: column; /* Empilha os itens verticalmente */
+            gap: .75rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Cada item individual da lista (onde fica o emoji e o texto) */
+        .items li {
+            display: flex; /* Coloca o emoji e o texto lado a lado */
+            align-items: center; /* Centraliza na mesma linha */
+            gap: .75rem; /* Espaço entre o emoji e o texto */
+            background: #f0f4ff; /* Fundo azul clarinho */
+            border-radius: 12px;
+            padding: .75rem 1rem;
+            font-size: .95rem;
+            color: #1e293b;
+            font-weight: 600;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        /* Atraso na animação de cada item da lista (.items) */
+        .items li:nth-child(1) { animation-delay: .15s; }
+        .items li:nth-child(2) { animation-delay: .25s; }
+        .items li:nth-child(3) { animation-delay: .35s; }
+
+        /* Tamanho do emoji (que está dentro dos itens) */
+        .items li .emoji {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        }
+
+        /* Botão principal laranja */
+        .button {
+        display: inline-block;
+        background: rgb(189, 26, 26);
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: .85rem 2.5rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 8px 24px rgba(167, 0, 0, 0.4);
+        text-decoration: none;
+        transition: transform .2s, box-shadow .2s;
+        letter-spacing: .02em;
+        margin-bottom: 1.2rem;
+        }
+
+        /* Cor quando o mouse passa por cima do botão */
+        .button:hover {
+        transform: translateY(-3px) scale(1.03);
+        box-shadow: 0 14px 32px rgba(0, 40, 114, 0.5);
+        background: linear-gradient(135deg, #8044ef, #1640f9);
+        }
+        
+        /* Texto de rodapé */
+        .realizacao {
+        font-size: .78rem;
+        color: #9ca3af;
+        }
