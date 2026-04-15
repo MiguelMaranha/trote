@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="style.css">
+        <title> Calculadora - Trote </title>
+        <script src="scripts.js"> </script>
+    </head>
+    <body>
+       <nav class="menu-principal">
+        <div class="menu-container">
+            <a href="calculadora.html" class="logo"> Trote 2026 </a>
+            <ul class="lista">
+                <li> <a href="index.html"> Início </a> </li> 
+                <li> <a href="introducao.html"> Introdução </a></li>
+                <li> <a href="formato.html"> Formato </a> </li> 
+                <li> <a href="equipes.html"> Equipes </a> </li>
+                <li> <a href="provas.html"> Provas & Metas </a> </li> 
+                <li> <a href="integracao.html"> Integração </a> </li>
+                <li> <a href="cronograma.html"> Cronograma </a> </li> 
+                <li> <a href="calculadora.html"> Calculadora </a> </li>
+            </ul>    
+        </div> 
+       </nav>
+       <div class="pagina"> <!-- Adicionado para deixar o footer sempre no fim da pagina -->
+        <main class="principal-sem-margem">
+                <section>
+                    <h3> 🧮 Simulador de pontos - Itens avulsos </h3>
+                    <div>
+                        <div class="form-group">
+                            <label> Arroz (5kg) </label> <!--Rótulo da caixa de texto-->
+                            <!-- caixa de texto com valor inicial de 0 e minimo de 0 -->
+                            <input type="number" value="0" min="0" id="qtdeArroz"/> <!-- id = identificador dessa caixa de texto -->
+                        </div>
+                        <div class="form-group">
+                            <label> Feijão (2kg) </label>
+                            <input type="number" value="0" min="0" id="qtdeFeijao"/>
+                        </div>
+                        <div class="form-group">
+                            <label> Macarrão (500g) </label>
+                            <input type="number" value="0" min="0" id="qtdeMacarrao"/>
+                        </div>
+                        <div class="form-group">
+                            <label> Óleo de soja (900ml/1L) </label>
+                            <input type="number" value="0" min="0" id="qtdeOleo"/>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section>
+                    <h3> Simulador de pontos - Kit Alimentação </h3>
+                    <div>
+                        <div class="form-group">
+                            <label> Escolha a cor do time </label>
+                            <select id="cor">
+                                <option value="verde"> Verde </option>
+                                <option value="amarelo"> Amarelo </option>
+                                <option value="cinza"> Cinza </option>
+                                <option value="laranja"> Laranja </option>
+                                <option value="marrom"> Marrom </option>
+                                <option value="preto"> Preto </option>
+                                <option value="rosa"> Rosa </option>
+                                <option value="roxo"> Roxo </option>
+                                <option value="vermelho"> Vermelho </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label> Kits de alimentação </label>
+                            <input type="number" id="qtdeKits" min="0" value="0">
+                        </div>
+                    </div>
+                </section> 
+
+                <button onclick="calcular()"> Calcular total </button>
+                    <div id="result" class="resultado">
+                        Pontuação total: 0 pontos
+                    </div>
+        </main>
+       </div>
+
+       
+       <footer class="footer">
+        <p>&copy; Coordenação trote solidário: trotesolidario@facef.br </p>
+        <p> Uni-FACEF - Centro Universitário Municipal de Franca </p>
+    </footer>
+
+    </body>
+</html>

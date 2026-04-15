@@ -3,6 +3,14 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f7f6;
     color: #333;
+/* Adicionado para deixar o footer sempre no fim da pagina */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+/* Adicionado para deixar o footer sempre no fim da pagina */
+.pagina {
+    flex: 1;
 }
 
 /* NAV */
@@ -43,9 +51,9 @@ body {
 .lista a {
     color: #cbdcf7;
     text-decoration: none;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 500;
-    transition: color .3s;
+    transition: color 0.3s;
 }
 
 .lista a:hover { color: #fff; }
@@ -76,6 +84,12 @@ body {
     padding: 20px;
 }
 
+.principal-sem-margem {
+    max-width: 900px;
+    margin: -40px auto 0px;
+    padding: 20px;
+}
+
 section {
     background: #fff;
     margin-bottom: 20px;
@@ -91,13 +105,20 @@ section {
 }
 
 /* CAIXAS AZUIS */
-.caixas {
+.caixa {
     flex: 1;
-    margin: 10px;
     padding: 15px;
     background-color: #00ccff15;
     border-left: 4px solid #1e3c72;
     border-radius: 10px;
+}
+
+.lista-valores {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* empilha verticalmente */
+    gap: 10px;
 }
 
 /* HORAS */
@@ -121,7 +142,7 @@ section {
     text-align: justify; /*alinhamento à direita e esquerda*/
 }
 
-.valores .ul {
+.valores ul {
     list-style: none;
     padding: 0px;
 }
@@ -201,9 +222,15 @@ th {
     background: red;
 }
 
-/* TEXTO PONTILHADO */
+/* Linha dos cursos escurecendo */
+.lista-equipes tr:hover { 
+    background-color: #f0f0f0; 
+    cursor: pointer;
+}
+
+/* BORDA PONTILHADA */
 .pontilhado {
-    border: 3px dotted #ffd755;
+    border: 3px dashed #ffd755;
     padding: 20px;
     background-color: #ffbb0018;
     border-radius: 6px;
@@ -237,24 +264,159 @@ th {
     box-shadow: 0 5px 15px rgba(0,0,0,.3);
 }
 
-.caixaprova5-6-7 {
-    background-color: #ffbb0018;
+.caixa-amarela {
+    background-color: #ffd90018;
     margin-bottom: 20px;
     padding: 25px;
     border-radius: 10px;
     border-left: 4px solid #ffd755;
     box-shadow: 0 5px 15px rgba(0,0,0,.3);
 }
-
+/* RODAPÉ */
 .footer {
     background-color: #1e3c72;
     color: white;
     text-align: center;
     padding: 20px;
-    width: 100%;
     border-top: 4px solid #ffd755;
 }
 
 .footer p {
     margin: 5px;
+}
+
+/*cronograma*/
+
+.timeline {
+    border-left: 3px solid #2a5298;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.evento {
+    margin-bottom: 25px;
+    position: relative; /* poder de flutuar na página sem alterar posição de outros elementos */
+
+}
+
+.evento::before { /* cria um pseudo elemento no css - serve para inserir conteudo
+decorativo ou informativo logo no inicio de um elemento sem que altere o html - elemento fantasma */
+    content: ""; /* sem texto */
+    width: 12px; /*largura da bolinha*/
+    height: 12px; /* altura da bolinha */
+    background: #ff4b2b; /*fundo da bolinha*/
+    border-radius: 50%; /* transforma em bolinha*/
+    position: absolute; /* cria a bolinha no inicio de cada div */
+    left: -27px; /* para esquerda */
+    top: 5px; /* abaixa 5px */
+}
+
+.grid-locais {
+    display: flex;
+    gap: 20px;
+}
+
+.locais {
+    flex: 1;
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+}
+
+
+/*Pág formato*/
+
+.caixas {
+    background-color: #00ccff15;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 4px solid #1e3c72;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+}
+
+.importante .caixas {
+    flex: 1;
+}
+
+.formatos {
+    border-bottom: 1px solid #ddd;
+}
+
+.formatos th {
+    border-bottom: none;
+} 
+
+.formatos  td {
+    border-bottom: none;
+    color: #a17607;
+    padding: 5px 15px;
+}
+
+.formatos tr:first-child td {
+    padding-top: 25px;
+}
+
+.formatos tr:last-child td {
+    padding-bottom: 25px;
+}
+
+.caixa-solida {
+    padding: 15px;
+    background-color: #e8f4fd;
+    border-left: 4px solid #1e3c72;
+    border-radius: 10px;
+}
+
+/* INTEGRAÇÃO */
+.integracaotext {
+    color: #8f6807;
+    text-shadow: 0px 0px 1px rgba(255, 200, 0, 0.075);
+    padding: 0px 0px 10px;
+}
+
+.lista-criterios {
+   list-style: none;
+    padding: 0;
+    color: #8f6807;
+    line-height: 2;
+
+}
+
+.criterios h4 {
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100px;
+}
+
+button {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #eef5ff;
+    border-left: 5px solid #1e3c72;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
